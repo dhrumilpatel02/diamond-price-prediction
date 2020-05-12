@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Diamond Price</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Diamond Price</h1>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+      <input type="text" name="Carat Weight" placeholder="Carat Weight" required="required" /><br>
+    	<input type="text" name="Cut" placeholder="Cut" required="required" /><br>
+        <input type="text" name="Color" placeholder="Color" required="required" /><br>
+        <input type="text" name="Clarity" placeholder="Clarity" required="required" /><br>
+        <input type="text" name="Polish" placeholder="Polish" required="required" /><br>
+        <input type="text" name="Symmetry" placeholder="Symmetry" required="required" /><br>
+        <input type="text" name="Report" placeholder="Report" required="required" /><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{pred}}
+
+</body>
+</html>
